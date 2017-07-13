@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Selectcodecountry View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="FiltersViewController" customModule="testSibers" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Xbi-UC-AT9">
+                                <rect key="frame" x="16" y="36" width="171.5" height="171.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Xbi-UC-AT9" secondAttribute="height" multiplier="1:1" id="zss-zX-jzG"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleAspectFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="RQH-cD-7p5">
+                                <rect key="frame" x="203.5" y="36" width="56" height="170"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H0v-5J-Bau">
+                                        <rect key="frame" x="0.0" y="0.0" width="56" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="fNq-xJ-SMq"/>
+                                        </constraints>
+                                        <inset key="contentEdgeInsets" minX="5" minY="0.0" maxX="5" maxY="0.0"/>
+                                        <state key="normal" title="Button"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                                <integer key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="7"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="applyFilterAt:" destination="BYZ-38-t0r" eventType="touchUpInside" id="udd-Lh-Rbx"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="20Y-JT-InG">
+                                        <rect key="frame" x="0.0" y="35" width="56" height="30"/>
+                                        <inset key="contentEdgeInsets" minX="5" minY="0.0" maxX="5" maxY="0.0"/>
+                                        <state key="normal" title="Button"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="7"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                                <integer key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="applyFilterAt:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KWs-s2-0OL"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wcP-10-Pjp">
+                                        <rect key="frame" x="0.0" y="70" width="56" height="30"/>
+                                        <inset key="contentEdgeInsets" minX="5" minY="0.0" maxX="5" maxY="0.0"/>
+                                        <state key="normal" title="Button"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="7"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                                <integer key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="applyFilterAt:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nRf-lO-vGZ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UvV-tc-Qje">
+                                        <rect key="frame" x="0.0" y="105" width="56" height="30"/>
+                                        <inset key="contentEdgeInsets" minX="5" minY="0.0" maxX="5" maxY="0.0"/>
+                                        <state key="normal" title="Button"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="7"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                                <integer key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="applyFilterAt:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4yt-u4-gnJ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bWp-li-FUj">
+                                        <rect key="frame" x="0.0" y="140" width="56" height="30"/>
+                                        <inset key="contentEdgeInsets" minX="5" minY="0.0" maxX="5" maxY="0.0"/>
+                                        <state key="normal" title="Button"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="7"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                                <integer key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="applyFilterAt:" destination="BYZ-38-t0r" eventType="touchUpInside" id="e7i-Gc-ImG"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="wcP-10-Pjp" firstAttribute="height" secondItem="UvV-tc-Qje" secondAttribute="height" id="InS-zj-TsH"/>
+                                    <constraint firstItem="H0v-5J-Bau" firstAttribute="height" secondItem="20Y-JT-InG" secondAttribute="height" id="MzK-wc-tJC"/>
+                                    <constraint firstItem="20Y-JT-InG" firstAttribute="height" secondItem="wcP-10-Pjp" secondAttribute="height" id="TYV-M9-GfP"/>
+                                    <constraint firstItem="UvV-tc-Qje" firstAttribute="height" secondItem="bWp-li-FUj" secondAttribute="height" id="oJF-Rp-M9L"/>
+                                </constraints>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AAU-WL-njH">
+                                <rect key="frame" x="79" y="107" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="selectImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Anf-ty-zXF"/>
+                                </connections>
+                            </button>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="UEj-Ii-03r">
+                                <rect key="frame" x="0.0" y="333.5" width="375" height="333.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="gb1-Hf-mfo">
+                                    <size key="itemSize" width="375" height="212"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="imageCell" id="EwY-wO-3JV" customClass="FilterImageCollectionViewCell" customModule="testSibers" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="212"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="212"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hvZ-dV-3OD">
+                                                    <rect key="frame" x="8" y="8" width="359" height="196"/>
+                                                </imageView>
+                                                <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="dkM-sV-0wy">
+                                                    <rect key="frame" x="8" y="105" width="359" height="2"/>
+                                                </progressView>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstAttribute="bottomMargin" secondItem="hvZ-dV-3OD" secondAttribute="bottom" id="1Bn-NV-HSB"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="hvZ-dV-3OD" secondAttribute="trailing" id="HxP-un-rbM"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="dkM-sV-0wy" secondAttribute="trailing" id="K6m-c6-caw"/>
+                                            <constraint firstItem="dkM-sV-0wy" firstAttribute="centerY" secondItem="EwY-wO-3JV" secondAttribute="centerY" id="ggq-Ud-Juq"/>
+                                            <constraint firstItem="dkM-sV-0wy" firstAttribute="leading" secondItem="EwY-wO-3JV" secondAttribute="leadingMargin" id="sbm-5F-V0K"/>
+                                            <constraint firstItem="hvZ-dV-3OD" firstAttribute="leading" secondItem="EwY-wO-3JV" secondAttribute="leadingMargin" id="trw-9c-OqR"/>
+                                            <constraint firstItem="hvZ-dV-3OD" firstAttribute="top" secondItem="EwY-wO-3JV" secondAttribute="topMargin" id="uxs-5F-lmV"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="imageView" destination="hvZ-dV-3OD" id="3GX-Y3-sVa"/>
+                                            <outlet property="progressView" destination="dkM-sV-0wy" id="ZfW-2r-jmX"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="DTc-rD-3uU"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="4N6-ss-S30"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="UEj-Ii-03r" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="8ds-rp-sDK"/>
+                            <constraint firstItem="UEj-Ii-03r" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="DCw-92-9M5"/>
+                            <constraint firstItem="RQH-cD-7p5" firstAttribute="leading" secondItem="Xbi-UC-AT9" secondAttribute="trailing" constant="16" id="SR2-T4-zeJ"/>
+                            <constraint firstItem="AAU-WL-njH" firstAttribute="centerX" secondItem="Xbi-UC-AT9" secondAttribute="centerX" id="aiz-uc-NKh"/>
+                            <constraint firstItem="Xbi-UC-AT9" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="b2o-wd-8S0"/>
+                            <constraint firstItem="Xbi-UC-AT9" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dhY-yd-IK2"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="UEj-Ii-03r" secondAttribute="bottom" id="hE0-Fc-LRh"/>
+                            <constraint firstItem="AAU-WL-njH" firstAttribute="centerY" secondItem="Xbi-UC-AT9" secondAttribute="centerY" id="pqg-tB-ubz"/>
+                            <constraint firstAttribute="trailing" secondItem="UEj-Ii-03r" secondAttribute="trailing" id="rDU-Qk-6Av"/>
+                            <constraint firstItem="Xbi-UC-AT9" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="16" id="v5e-2v-pit"/>
+                            <constraint firstItem="RQH-cD-7p5" firstAttribute="top" secondItem="Xbi-UC-AT9" secondAttribute="top" id="vEZ-Ac-phO"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="blackWhiteFilterButton" destination="20Y-JT-InG" id="dLg-co-co6"/>
+                        <outlet property="collectionView" destination="UEj-Ii-03r" id="i4L-P5-3FU"/>
+                        <outlet property="invertionFilterButton" destination="UvV-tc-Qje" id="yta-aJ-EjA"/>
+                        <outlet property="mirrorFilterButton" destination="wcP-10-Pjp" id="EFB-6q-gEa"/>
+                        <outlet property="mirrorLeftOnRightButton" destination="bWp-li-FUj" id="dSc-7o-49N"/>
+                        <outlet property="originalImageView" destination="Xbi-UC-AT9" id="9LJ-0J-Da5"/>
+                        <outlet property="rotateFilterButton" destination="H0v-5J-Bau" id="jc6-8E-Gtu"/>
+                        <outlet property="selectionImageButton" destination="AAU-WL-njH" id="rNy-gc-rMb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <customObject id="JUj-NQ-9DH" customClass="FiltersModuleInitializer" customModule="testSibers" customModuleProvider="target">
+                    <connections>
+                        <outlet property="selectcodecountryViewController" destination="BYZ-38-t0r" id="7aT-ph-ioE"/>
+                    </connections>
+                </customObject>
+            </objects>
+            <point key="canvasLocation" x="120.8" y="121.88905547226388"/>
+        </scene>
+    </scenes>
+</document>
