@@ -22,11 +22,7 @@ class FiltersViewController: UIViewController, FiltersViewInput {
     @IBOutlet weak var selectionImageButton: UIButton!
     @IBOutlet weak var originalImageView: UIImageView!
     
-    @IBOutlet weak var rotateFilterButton: UIButton!
-    @IBOutlet weak var blackWhiteFilterButton: UIButton!
-    @IBOutlet weak var mirrorFilterButton: UIButton!
-    @IBOutlet weak var invertionFilterButton: UIButton!
-    @IBOutlet weak var mirrorLeftOnRightButton: UIButton!
+    @IBOutlet var filterButtons: Array<UIButton> = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -59,53 +55,42 @@ class FiltersViewController: UIViewController, FiltersViewInput {
         originalImageView.isHidden = true
         selectionImageButton.isHidden = false
         
-        rotateFilterButton.setTitle("Rotate", for: .normal)
-        blackWhiteFilterButton.setTitle("Black-White", for: .normal)
-        mirrorFilterButton.setTitle("Mirror", for: .normal)
-        invertionFilterButton.setTitle("Invertion", for: .normal)
-        mirrorLeftOnRightButton.setTitle("Mirror 1/2", for: .normal)
-        
-        rotateFilterButton.tag = Filter.rotate.hashValue
-        blackWhiteFilterButton.tag = Filter.blackWhite.hashValue
-        mirrorFilterButton.tag = Filter.mirror.hashValue
-        invertionFilterButton.tag = Filter.invertion.hashValue
-        mirrorLeftOnRightButton.tag = Filter.mirrorLeftOnRight.hashValue
-        
-        disableButtons()
+        for button in filterButtons.enumerated() {
+            let nameAndTag = getNameAndTag(at: button.offset)
+            button.element.tag = nameAndTag.tag
+            button.element.setTitle(nameAndTag.name, for: .normal)
+        }
         
         selectionImageButton.setTitle("Select image", for: .normal)
         
         let tapGestureOriginalImage = UITapGestureRecognizer(target: self, action: #selector(handleTapGestureOriginalImage))
         originalImageView.addGestureRecognizer(tapGestureOriginalImage)
         originalImageView.isUserInteractionEnabled = true
+        stateButtonFilters(at: false, color: UIColor.disable)
     }
     
-    func enableButtons() {
-        rotateFilterButton.isEnabled = true
-        blackWhiteFilterButton.isEnabled = true
-        mirrorFilterButton.isEnabled = true
-        invertionFilterButton.isEnabled = true
-        mirrorLeftOnRightButton.isEnabled = true
-        
-        rotateFilterButton.layer.borderColor = UIColor(red: 0.0, green: 111.0/255.0, blue: 1.0, alpha: 1.0).cgColor
-        blackWhiteFilterButton.layer.borderColor = UIColor(red: 0.0, green: 111.0/255.0, blue: 1.0, alpha: 1.0).cgColor
-        mirrorFilterButton.layer.borderColor = UIColor(red: 0.0, green: 111.0/255.0, blue: 1.0, alpha: 1.0).cgColor
-        invertionFilterButton.layer.borderColor = UIColor(red: 0.0, green: 111.0/255.0, blue: 1.0, alpha: 1.0).cgColor
-        mirrorLeftOnRightButton.layer.borderColor = UIColor(red: 0.0, green: 111.0/255.0, blue: 1.0, alpha: 1.0).cgColor
+    func getNameAndTag(at index: Int) -> (name: String, tag: Int) {
+        switch index {
+        case 0:
+            return ("Rotate", Filter.rotate.hashValue)
+        case 1:
+            return ("Black-White", Filter.blackWhite.hashValue)
+        case 2:
+            return ("Mirror", Filter.mirror.hashValue)
+        case 3:
+            return ("Invertion", Filter.invertion.hashValue)
+        case 4:
+            return ("Mirror 1/2", Filter.mirrorLeftOnRight.hashValue)
+        default:
+            return ("", -1)
+        }
     }
     
-    func disableButtons() {
-        rotateFilterButton.layer.borderColor = UIColor(red: 203.0/255.0, green: 203.0/255.0, blue: 203.0/255.0, alpha: 1.0).cgColor
-        blackWhiteFilterButton.layer.borderColor = UIColor(red: 203.0/255.0, green: 203.0/255.0, blue: 203.0/255.0, alpha: 1.0).cgColor
-        mirrorFilterButton.layer.borderColor = UIColor(red: 203.0/255.0, green: 203.0/255.0, blue: 203.0/255.0, alpha: 1.0).cgColor
-        invertionFilterButton.layer.borderColor = UIColor(red: 203.0/255.0, green: 203.0/255.0, blue: 203.0/255.0, alpha: 1.0).cgColor
-        mirrorLeftOnRightButton.layer.borderColor = UIColor(red: 203.0/255.0, green: 203.0/255.0, blue: 203.0/255.0, alpha: 1.0).cgColor
-        
-        rotateFilterButton.isEnabled = false
-        blackWhiteFilterButton.isEnabled = false
-        mirrorFilterButton.isEnabled = false
-        invertionFilterButton.isEnabled = false
-        mirrorLeftOnRightButton.isEnabled = false
+    func stateButtonFilters(at isEnable: Bool, color: UIColor) {
+        for button in filterButtons {
+            button.isEnabled = isEnable
+            button.layer.borderColor = color.cgColor
+        }
     }
     
     func handleTapGestureOriginalImage() {
@@ -154,14 +139,10 @@ class FiltersViewController: UIViewController, FiltersViewInput {
         self.present(imagePickerController, animated: true, completion: nil)
     }
     
-    func setupFiltered(_ image: UIImage?) {
-    }
-    
     func disabledFiltersAndShowImageView() {
         originalImageView.isHidden = false
         selectionImageButton.isHidden = true
-        
-        enableButtons()
+        stateButtonFilters(at: true, color: UIColor.enable)
     }
     
     func setupOriginal(_ image: UIImage) {

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -192,14 +192,14 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="blackWhiteFilterButton" destination="20Y-JT-InG" id="dLg-co-co6"/>
                         <outlet property="collectionView" destination="UEj-Ii-03r" id="i4L-P5-3FU"/>
-                        <outlet property="invertionFilterButton" destination="UvV-tc-Qje" id="yta-aJ-EjA"/>
-                        <outlet property="mirrorFilterButton" destination="wcP-10-Pjp" id="EFB-6q-gEa"/>
-                        <outlet property="mirrorLeftOnRightButton" destination="bWp-li-FUj" id="dSc-7o-49N"/>
                         <outlet property="originalImageView" destination="Xbi-UC-AT9" id="9LJ-0J-Da5"/>
-                        <outlet property="rotateFilterButton" destination="H0v-5J-Bau" id="jc6-8E-Gtu"/>
                         <outlet property="selectionImageButton" destination="AAU-WL-njH" id="rNy-gc-rMb"/>
+                        <outletCollection property="filterButtons" destination="H0v-5J-Bau" collectionClass="NSMutableArray" id="hAT-6S-C7L"/>
+                        <outletCollection property="filterButtons" destination="20Y-JT-InG" collectionClass="NSMutableArray" id="EsX-VX-BnN"/>
+                        <outletCollection property="filterButtons" destination="UvV-tc-Qje" collectionClass="NSMutableArray" id="jeD-Cz-hfi"/>
+                        <outletCollection property="filterButtons" destination="bWp-li-FUj" collectionClass="NSMutableArray" id="aUT-Cf-Kai"/>
+                        <outletCollection property="filterButtons" destination="wcP-10-Pjp" collectionClass="NSMutableArray" id="AKe-Us-bCi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

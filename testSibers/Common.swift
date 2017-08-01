@@ -8,6 +8,12 @@
 
 import UIKit
 
+extension UIColor {
+    open class var disable: UIColor { return UIColor(red: 203.0/255.0, green: 203.0/255.0, blue: 203.0/255.0, alpha: 1.0)}
+    
+    open class var enable: UIColor { return UIColor(red: 0.0, green: 111.0/255.0, blue: 1.0, alpha: 1.0)}
+}
+
 extension UIImage {
     func fixOrientation() -> UIImage
     {
